@@ -1,0 +1,211 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+ body {
+ 	font-family: sans-serif;
+ 	margin: 0;
+ 	line-height: 1.5;
+ }
+.login-area {
+	min-height: 100vh;
+	padding:15px;
+	background-color: #eeeeee;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+ }
+.login-area .login-wraper {
+ 	background-image: url('../img/2.png');
+ 	background-size: cover;
+ 	background-position: -174px center;
+ 	background-repeat: repeat-x;
+ 	flex: 0 0 700px;
+ 	max-width: 700px;
+ 	min-height: 480px;
+ 	box-shadow: 0 0 10px #ddd;
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	position: relative;
+ 	z-index: 1;
+ 	transition: all 0.5s ease-in-out;
+
+ }
+ .login-area .login-wraper.slide-active {
+ 	background-position: 160px center;
+ }
+
+ .login-area .login-wraper::before {
+ 	content: '';
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	z-index: -1;
+ 	background-color: rgba(0,0,0,0.4);
+ }
+.login-area .login-wraper .left,
+.login-area .login-wraper .right {
+	flex: 0 0 50%;
+	max-width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 40px 0;
+}
+.login-area .login-wraper .left h3,
+.login-area .login-wraper .right h3 {
+	font-size: 20px;
+	color: #fff;
+	margin: 0 0 15px;
+}
+.login-area .login-wraper .left .register-btn,
+.login-area .login-wraper .right .login-btn {
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 25px;
+	font-size: 16px;
+	color: #fff;
+	padding: 10px 35px;
+	background-color: transparent;
+} 
+.login-area .login-wraper .left .register-btn:focus,
+.login-area .login-wraper .right .login-btn:focus {
+	outline: none;
+}
+.login-area .login-wraper .form {
+	position: absolute;
+	background-color: #fff;
+	height: 100%;
+	width: 50%;
+	right: 0;
+	top: 0;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 0.5s ease-in-out;
+}
+ .login-area .login-wraper.slide-active .form {
+ 	right: 50%;
+ }
+.login-area .login-wraper .form h3 {
+	font-size: 20px;
+	color: #000;
+	margin: 0 0 30px;
+}
+/*.login-area .login-wraper .form .login-form {
+	flex: 0 0 100%;
+	max-width: 100%;
+
+}*/
+.login-area .login-wraper .form .form-group {
+	margin-bottom: 20px;
+}
+.login-area .login-wraper .form .lost-pass-form,
+.login-area .login-wraper .form .login-form,
+.login-area .login-wraper .form .register-form {
+	transition: 0.5s ease-in-out;
+}
+.login-area .login-wraper .form .form-control {
+	width: 100%;
+	height: 45px;
+	font-size: 16px;
+	color: #000;
+	border: none;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+}
+.login-area .login-wraper .form .form-control:focus {
+	outline: none;
+
+}
+.login-area .login-wraper .form label {
+	font-size: 15px;
+	color: #555;
+}
+.login-area .login-wraper .form .submit-btn {
+	width: 100%;
+	height: 40px;
+	background-color: #5FE5E6;
+	border: none;
+	border-radius: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-top: 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.login-area .login-wraper .form .submit-btn:focus {
+	outline: none;
+}
+.login-area .login-wraper .form p {
+	margin-top: 20px;
+	text-align: center;
+}
+.login-area .login-wraper .form h5 {
+	font-size: 16px;
+	color: #555;
+	margin: 0 0 30px;
+	font-weight: normal;
+}
+.login-area .login-wraper .form .login-form p a,
+.login-area .login-wraper .form .register-form p a {
+	font-size: 16px;
+	text-decoration: none;
+	display: inline-block;
+	color: #3f51b5;
+}
+.login-area .login-wraper .form .form-hidden {
+	max-height: 0;
+	visibility: hidden;
+	opacity: 0;
+	overflow: hidden;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 767px) {
+	.login-area .login-wraper {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 575px) {
+	.login-area .login-wraper .form {
+		position: relative;
+		width: 100%;
+		right: auto;
+		top: auto;
+		height: auto;
+	}
+	.login-area .login-wraper,
+	.login-area .login-wraper.slide-active {
+		background-position: center;
+	}
+	.login-area .login-wraper.slide-active .form {
+		right: auto;
+	}
+}
+
+@media (max-width: 388px) {
+	.login-area .login-wraper .left h3,
+	.login-area .login-wraper .right h3 {
+	    font-size: 16px;
+	}
+	.login-area .login-wraper .left .register-btn,
+	.login-area .login-wraper .right .login-btn {
+	    font-size: 14px;
+	    padding: 7px 25px;
+	}
+}
+@media (max-width: 316px) {
+	.login-area .login-wraper .left h3,
+	.login-area .login-wraper .right h3 {
+	    font-size: 12px;
+	}
+}

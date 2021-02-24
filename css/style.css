@@ -1,0 +1,547 @@
+/*
+  Theme Name: Name - Furniture Land HTML Template
+  Author: ariyansolutions@gmail.com
+  Support: admin@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+/*
+==================================
+BASIC SETUP
+==================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ body {
+  font-family: 'Lora', serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*
+==================================
+REUSABLE COMPONENTS
+==================================
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'lora', serif;
+    font-weight: 700;
+    color: #000a2d;
+    margin-top: 0px;
+    font-style: normal;
+    text-transform: normal;
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6e7797;
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.position {
+    position: relative;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+
+/* button style */
+.btn {
+	-moz-user-select: none;
+	background: #5FE5E6 none repeat scroll 0 0;
+	border: 2px solid transparent;
+	border-radius: 30px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	margin-bottom: 0;
+  padding: 8px 15px;
+	text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.btn:hover {
+    background: none;
+    color: #5FE5E6;
+    border-color: #5FE5E6;
+}
+.breadcrumb > .active {
+	color: #888;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background: #929292;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #d6d6d6;
+}
+
+
+/* scrollUp */
+#scrollUp {
+	background: #7DBA2F;
+	height: 35px;
+	width: 35px;
+	right: 50px;
+	bottom: 77px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 20px;
+	line-height: 34px;
+}
+#scrollUp:hover {
+	background: #444;
+}
+.section-title h2 {
+    color: #24303E;
+    font-size: 60px;
+    letter-spacing: 7px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+/*
+==================================
+HEADER SECTION
+==================================
+*/
+
+.header {
+    background: transparent;
+    padding: 0;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+}
+.header .open-nav {
+  display: none;
+  opacity: 0;
+}
+.nav {
+  margin-left: auto;
+}
+.header .nav .close-nav {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: #4f67e9;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.header .nav ul li {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+}
+.header .nav ul li a {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+}
+
+.header .nav ul li a:hover {
+  color: #fcad2e;
+}
+.header .nav ul li a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background: #fcad2e;
+  right: 0;
+  left: auto;
+  bottom: -5px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.header .nav ul li a:hover:after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+/*Login*/
+.login {
+    display: inline-block;
+    margin-right: 50px;
+}
+.login {
+    padding: 0 12px;
+    border: 1px solid #5FE5E6;
+    border-radius: 30px;
+    text-transform: uppercase;
+    margin-left: 30PX;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.login:hover {
+    border: 1px solid transparent;
+    background-color: #5FE5E6;
+}
+.login a {
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Open Sans';
+}
+/*Searchbar*/
+.searchbar {
+	position: relative;
+  display: inline-block;
+}
+.searchbar input[type="text"] {
+    border: 0;
+    padding: 0 0px;
+    width: 0px;
+    height: 35px;
+    border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.searchbar .icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: none;
+	width: 35px;
+	height: 100%; 
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+}
+.searchbar .icon i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.searchbar .icon.active{
+  background: #5FE5E6;
+  transition: all 0.3s ease;
+}
+
+.searchbar input[type="text"].active{
+  width: 250px;
+  padding: 0 10px;
+  transition: all 0.5s 0.2s ease;
+  margin-left: -25px;
+}
+/*
+==================================
+SLIDER SECTION
+==================================
+*/
+.slider-area {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #ddd;
+	position: relative;
+}
+.slider-area:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.4;
+}
+.slider-content {
+    padding: 200px 0 386px 0;
+}
+.slider-content h3 {
+	font-size: 18px;
+	color: #fff;
+	font-weight: 400;
+}
+.slider-content h1 {
+	color: #ffc017;
+	font-size: 35px;
+	font-weight: 700;
+}
+.slider-content span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.slider-content span {
+    display: inline-block;
+}
+.btn-hero {
+    background: none;
+    border-color: #5FE5E6;
+}
+
+/*
+==================================
+ABOUT US SECTION
+==================================
+*/
+.section-title {
+	text-align: center;
+}
+.about-text h4 {
+    font-size: 33px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+/*
+==================================
+COLLECTION SECTION
+==================================
+*/
+
+.product-text h4 {
+    letter-spacing: 2px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.product-text p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+a.btn-link {
+    font-size: 20px;
+    color: #24303E;
+    text-decoration: underline;
+}
+.link span {
+	font-size: 20px;
+}
+/*
+==================================
+NEW ARRIVLS SECTION
+==================================
+*/
+.new-arrival-single {
+	transition: 0.4s;
+}
+.new-arrival-single:hover {
+    box-shadow: 0 3px 30px #d6d2d1;
+}
+.new-arrival-text {
+    padding-bottom: 5px;
+}
+.new-arrival-text a {
+	font-size: 16px;
+	font-weight: 700;
+	color: #24303E;
+	margin: 10px 0;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	display: block;
+	letter-spacing: 2px;
+	font-family: 'Open Sans', sans-serif;
+}
+.new-arrival-text a:hover {
+	color: #5FE5E6;
+}
+.new-arrival-text span {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif; 
+}
+.new-arrival-btn .btn-items {
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+}
+.new-arrival-btn .btn-items.bg {
+	background: #929292;
+}
+.new-arrival-btn .btn-items.bg1 {
+	background: #EF8F8F;
+}
+.new-arrival-btn .btn-items.bg2 {
+	background: #8295E2;
+}
+.new-arrival-btn .btn-items.bg3 {
+	background: #56DE3C;
+}
+.new-arrival-btn .herman-chair {
+	background: #3B363B;
+}
+.new-arrival-btn .herman-table {
+	background: #946148;
+}
+.new-arrival-btn .herman-arm-sofa {
+	background: #49A8BA;
+}
+.new-arrival-btn .herman-sofa {
+	background: #A39E9B;
+}
+
+
+.sales-text p {
+    margin-bottom: 0;
+    padding-top: 20px;
+    font-family: lora;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.btn-sale {
+    background: transparent;
+    border-color: #5FE5E6;
+    color: #24303E;
+    font-family: 'Open Sans';
+}
+
+
+
+.client-img {
+    margin-right: 20px;
+}
+.client-name span {
+	color: #1B646E;
+	font-size: 25px;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+}
+.client-name .star i {
+	color: #FFC107;
+}
+.client-review p {
+	padding-right: 60px;
+}
+
+footer {
+	background-color: #222E3D;
+}
+.social-link ul li {
+	display: inline-block;
+}
+.social-link ul li a i {
+    background: #47ECEC;
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 25px;
+    transition: 0.3s;
+}
+.social-link ul li:hover a i {
+	color: #fff;
+}
+.contact-detail p,
+.contact-detail address {
+	color: #47ECEC;
+	font-size: 14px;
+	margin-bottom: 3px;
+	font-family: 'Open Sans', sans-serif;
+}
+.links ul li{
+	line-height: 2;
+}
+.links p,
+.links ul li a {
+	color: #47ECEC;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+.links ul li a:hover {
+	padding-left: 10px;
+}
+.download-app span {
+    color: #47ECEC;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+.copyright-area {
+	background: #47ECEC;
+}
+
+.copyright-area p {
+    margin-bottom: 0;
+    padding: 10px 0;
+    padding-bottom: 15px;
+    color: #000;
+}
+.copyright-area .col-lg-6:nth-child(2) {
+	text-align: end;
+}
+/*.copyright-area .col-lg-6:nth-child(2) p strong {
+	color: #fff;
+}*/
+
+
+/*
+
+929292
+#EF8F8F
+#8295E2
+#56DE3C
+
+
+*/
